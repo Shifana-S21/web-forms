@@ -2,55 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Registration Form</title>
-  <link rel="stylesheet" href="form-style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="form-container">
-    <h1>🌐 Registration Form</h1>
-    <form id="registrationForm" action="submit.html" method="post" novalidate>
-      <!-- Name -->
+    <h2>User Registration Form</h2>
+    <form id="registrationForm">
       <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+      <input type="text" id="fullname" name="fullname" required />
 
-      <!-- Email -->
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" placeholder="example@example.com" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-      <!-- Password -->
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" minlength="6" required />
+      <input type="password" id="password" name="password" required minlength="6" />
 
-      <!-- Age -->
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" min="13" max="99" required />
-
-      <!-- Date of Birth -->
       <label for="dob">Date of Birth:</label>
       <input type="date" id="dob" name="dob" required />
 
-      <!-- Gender -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number" />
+
       <label for="gender">Gender:</label>
       <select id="gender" name="gender" required>
         <option value="">--Select--</option>
-        <option value="female">Female</option>
         <option value="male">Male</option>
+        <option value="female">Female</option>
         <option value="other">Other</option>
       </select>
 
-      <!-- Website -->
-      <label for="website">Personal Website (optional):</label>
-      <input type="url" id="website" name="website" placeholder="https://yourwebsite.com" />
-
-      <!-- File Upload -->
-      <label for="resume">Upload Resume (PDF only):</label>
-      <input type="file" id="resume" name="resume" accept=".pdf" />
-
-      <!-- Terms -->
-      <label class="checkbox-label">
-        <input type="checkbox" name="terms" required />
-        I agree to the terms and conditions
+      <label>
+        <input type="checkbox" required />
+        I agree to the terms and conditions.
       </label>
 
-      <!-- Submit -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
